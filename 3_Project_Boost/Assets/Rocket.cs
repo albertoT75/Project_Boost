@@ -5,6 +5,10 @@ public class Rocket : MonoBehaviour {
 
   [SerializeField] float rcsThrust = 150f;
   [SerializeField] float mainThrust = 100f;
+  [SerializeField] AudioClip mainEngine;
+  [SerializeField] AudioClip deathSound;
+  [SerializeField] AudioClip levelLoad;
+
   Rigidbody rigidBody;
   AudioSource audioSource;
 
@@ -24,8 +28,8 @@ public class Rocket : MonoBehaviour {
   {
     if (state == State.Alive)
     {
-      Thrust();
-  		Rotate();
+      RespondToThrustInput();
+  		RespondToRotateInput();
     }
 	}
 
@@ -40,14 +44,28 @@ public class Rocket : MonoBehaviour {
         print ("OK");
         break;
       case "Finish":
-        state = State.Transcending;
-        Invoke("LoadNextLevel", 1f);
+        StartSuccessSequence();
         break;
       default:
-        state = State.Dying;
-        Invoke("LoadFirstLevel", 1f);
+        StartDeathSequence();
         break;
     }
+  }
+
+  private void StartSuccessSequence()
+  {
+    state = State.Transcending;
+        audioSource.Stop();
+        audioSource.PlayOneShot(levelLoad);
+        Invoke("LoadNextLevel", 1f);
+  }
+
+  private void StartDeathSequence()
+  {
+    state = State.Dying;
+        audioSource.Stop();
+        audioSource.PlayOneShot(deathSound);
+        Invoke("LoadFirstLevel", 3f);
   }
 
   private void LoadNextLevel()
@@ -60,25 +78,30 @@ public class Rocket : MonoBehaviour {
     SceneManager.LoadScene(0);
   }
 
-  private void Thrust()
+  private void RespondToThrustInput()
   {
 
     if (Input.GetKey(KeyCode.Space))
     {
-      rigidBody.AddRelativeForce(Vector3.up * mainThrust);
-      if (!audioSource.isPlaying)
-      {
-        audioSource.Play();
-      }
+      ApplyThrust();
     }
     else
     {
-        audioSource.Stop();
+      audioSource.Stop();
     }
   }
 
+  private void ApplyThrust()
+  {
+    rigidBody.AddRelativeForce(Vector3.up * mainThrust);
+      if (!audioSource.isPlaying)
+      {
+        audioSource.PlayOneShot(mainEngine);
+      }
+  }
 
-  private void Rotate()
+
+  private void RespondToRotateInput()
   {
     rigidBody.freezeRotation = true; // take manual control of rotation
     float rotationThisFrame = rcsThrust * Time.deltaTime;

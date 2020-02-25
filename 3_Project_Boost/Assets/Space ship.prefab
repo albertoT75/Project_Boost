@@ -686,7 +686,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: cbfccc3b6c92046aea1eb7c3a1df2f98, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.5
   m_Pitch: 1
@@ -732,7 +732,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -756,7 +756,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!108 &108855035095036162
 Light:
   m_ObjectHideFlags: 1
@@ -842,6 +842,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rcsThrust: 250
   mainThrust: 40
+  mainEngine: {fileID: 8300000, guid: cbfccc3b6c92046aea1eb7c3a1df2f98, type: 3}
+  deathSound: {fileID: 8300000, guid: 9b3ff22441c45483eb1a36eaaf6556f7, type: 3}
+  levelLoad: {fileID: 8300000, guid: b458964819c2c450f8e7f978cd085604, type: 3}
 --- !u!135 &135092024950891142
 SphereCollider:
   m_ObjectHideFlags: 1
