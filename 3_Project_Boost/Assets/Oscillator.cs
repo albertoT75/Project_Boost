@@ -22,10 +22,10 @@ public class Oscillator : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
   {
-    // set movement factor
+    if (period <= Mathf.Epsilon) { return; }// protect against period is zero
     float cycles = Time.time / period; // grows continually from 0
 
-    const float tau = Mathf.PI * 2f; // about 6.28
+    const float tau = Mathf.PI * 2f; // about 6.28, 1 cycle of a circle
     float rawSinWave = Mathf.Sin(cycles * tau); // goes from -1 to +1
 
     movementFactor = rawSinWave / 2f + 0.5f;
