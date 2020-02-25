@@ -650,7 +650,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2762e81416c1a4ae981838b6bdd75b88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementVector: {x: 20, y: 0, z: 0}
+  movementVector: {x: 20, y: -5, z: 0}
+  period: 2
   movementFactor: 0
 --- !u!4 &861535506
 Transform:
