@@ -20,7 +20,7 @@ public class Rocket : MonoBehaviour {
   Rigidbody rigidBody;
   AudioSource audioSource;
 
-  bool collisionsDisabled = true;
+  // bool collisionsDisabled = true;
 
   enum State { Alive, Dying, Transcending }
   State state = State.Alive;
@@ -42,28 +42,29 @@ public class Rocket : MonoBehaviour {
       RespondToThrustInput();
   		RespondToRotateInput();
     }
-    if (Debug.isDebugBuild)
-    {
-      RespondToDebugKeys();
-    }
+    // if (Debug.isDebugBuild)
+    // {
+    //   RespondToDebugKeys();
+    // }
 	}
 
-  private void RespondToDebugKeys()
-  {
-    if (Input.GetKeyDown(KeyCode.L))
-    {
-      LoadNextLevel();
-    }
-    else if (Input.GetKey(KeyCode.C))
-    {
-      collisionsDisabled = !collisionsDisabled; //toggle
-    }
-  }
+  // private void RespondToDebugKeys()
+  // {
+  //   if (Input.GetKeyDown(KeyCode.L))
+  //   {
+  //     LoadNextLevel();
+  //   }
+  //   else if (Input.GetKey(KeyCode.C))
+  //   {
+  //     collisionsDisabled = !collisionsDisabled; //toggle
+  //   }
+  // }
 
   void OnCollisionEnter(Collision collision)
   {
 
-    if (state != State.Alive || collisionsDisabled) { return; } // ignore collision
+    if (state != State.Alive)  { return; } // ignore collision
+      // || collisionsDisabled)
 
     switch (collision.gameObject.tag)
     {
