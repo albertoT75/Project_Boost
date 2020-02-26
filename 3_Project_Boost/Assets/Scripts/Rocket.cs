@@ -15,8 +15,12 @@ public class Rocket : MonoBehaviour {
   [SerializeField] ParticleSystem successParticles;
   [SerializeField] ParticleSystem deathParticles;
 
+  [SerializeField] bool collision;
+
   Rigidbody rigidBody;
   AudioSource audioSource;
+
+  bool collisionsDisabled = true;
 
   enum State { Alive, Dying, Transcending }
   State state = State.Alive;
@@ -32,17 +36,34 @@ public class Rocket : MonoBehaviour {
 	// Update is called once per frame
 	void Update()
   {
+
     if (state == State.Alive)
     {
       RespondToThrustInput();
   		RespondToRotateInput();
     }
+    if (Debug.isDebugBuild)
+    {
+      RespondToDebugKeys();
+    }
 	}
+
+  private void RespondToDebugKeys()
+  {
+    if (Input.GetKeyDown(KeyCode.L))
+    {
+      LoadNextLevel();
+    }
+    else if (Input.GetKey(KeyCode.C))
+    {
+      collisionsDisabled = !collisionsDisabled; //toggle
+    }
+  }
 
   void OnCollisionEnter(Collision collision)
   {
 
-    if (state != State.Alive) { return; } // ignore collision
+    if (state != State.Alive || collisionsDisabled) { return; } // ignore collision
 
     switch (collision.gameObject.tag)
     {
@@ -135,6 +156,7 @@ public class Rocket : MonoBehaviour {
         | RigidbodyConstraints.FreezeRotationY
         | RigidbodyConstraints.FreezePositionZ; // resume physics control of rotation
   }
+
 
 }
 
