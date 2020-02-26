@@ -38,7 +38,6 @@ GameObject:
   - component: {fileID: 33775416898492296}
   - component: {fileID: 23479085999055514}
   - component: {fileID: 65509354141912348}
-  - component: {fileID: 65871023650415684}
   m_Layer: 0
   m_Name: Landing Pad
   m_TagString: Finish
@@ -53,7 +52,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1767527627910648}
   m_LocalRotation: {x: 0.44008723, y: -0.09441088, z: 0.04133451, w: 0.8920209}
-  m_LocalPosition: {x: -0.09, y: 4.8, z: -0.6200831}
+  m_LocalPosition: {x: 0.004, y: 0.15, z: -0.676}
   m_LocalScale: {x: 0.29837206, y: 0.9028841, z: 1.164562}
   m_Children: []
   m_Father: {fileID: 4964398162525298}
@@ -66,8 +65,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1870049255282462}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 40.5, y: 5.2, z: 0}
-  m_LocalScale: {x: 3.4254313, y: 0.84423065, z: 2.4428647}
+  m_LocalPosition: {x: 40.481, y: 2.92, z: -0.19198}
+  m_LocalScale: {x: 5.7993827, y: 5.799381, z: 5.799381}
   m_Children:
   - {fileID: 4622353799747462}
   m_Father: {fileID: 0}
@@ -124,20 +123,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &65871023650415684
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1870049255282462}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.0169075, y: 0.28574756, z: 1.039746}
+  m_Center: {x: -0.028253019, y: -0.4857128, z: 0.11179399}
 --- !u!108 &108506064960875382
 Light:
   m_ObjectHideFlags: 1
@@ -149,11 +136,11 @@ Light:
   m_Type: 2
   m_Color: {r: 0.44117647, g: 1, b: 0.49127787, a: 1}
   m_Intensity: 10
-  m_Range: 10
+  m_Range: 30
   m_SpotAngle: 20
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1

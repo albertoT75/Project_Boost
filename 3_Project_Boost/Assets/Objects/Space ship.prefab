@@ -343,7 +343,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1680187788199442}
   m_LocalRotation: {x: 0.5169972, y: -0.552434, z: 0.37467527, w: -0.53586286}
-  m_LocalPosition: {x: -0.2700014, y: -0.60999966, z: 0.7500002}
+  m_LocalPosition: {x: 1.41, y: -0.60999966, z: 0.79}
   m_LocalScale: {x: 1, y: 1.0000005, z: 1.0000005}
   m_Children: []
   m_Father: {fileID: 4276592883334232}
@@ -369,7 +369,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1498680809560082}
   m_LocalRotation: {x: 0, y: 0.99991244, z: 0, w: -0.013234206}
-  m_LocalPosition: {x: -42.059998, y: 9.5, z: 0}
+  m_LocalPosition: {x: -42.4, y: 5.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4319269203183756}
@@ -919,10 +919,10 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 0
-  m_Color: {r: 1, g: 0.6377282, b: 0.44117647, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 5
-  m_Range: 20
-  m_SpotAngle: 112
+  m_Range: 40
+  m_SpotAngle: 100
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -956,7 +956,7 @@ Light:
   serializedVersion: 8
   m_Type: 0
   m_Color: {r: 0.44117647, g: 1, b: 0.49127787, a: 1}
-  m_Intensity: 7
+  m_Intensity: 20
   m_Range: 40
   m_SpotAngle: 112
   m_CookieSize: 10
@@ -991,10 +991,10 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 0
-  m_Color: {r: 1, g: 0.6377282, b: 0.44117647, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 5
-  m_Range: 20
-  m_SpotAngle: 112
+  m_Range: 40
+  m_SpotAngle: 100
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -1028,7 +1028,7 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.31639275, g: 0.62207377, b: 0.97794116, a: 1}
-  m_Intensity: 10
+  m_Intensity: 20
   m_Range: 20
   m_SpotAngle: 74
   m_CookieSize: 10
@@ -1070,7 +1070,7 @@ MonoBehaviour:
   levelLoadDelay: 3
   mainEngine: {fileID: 8300000, guid: cbfccc3b6c92046aea1eb7c3a1df2f98, type: 3}
   deathSound: {fileID: 8300000, guid: 9b3ff22441c45483eb1a36eaaf6556f7, type: 3}
-  levelLoad: {fileID: 8300000, guid: b458964819c2c450f8e7f978cd085604, type: 3}
+  levelLoad: {fileID: 8300000, guid: bc25e1331cb8542a7be8cf244ccfe2ea, type: 3}
   mainEngineParticles: {fileID: 198806617872337822}
   successParticles: {fileID: 198321420292565058}
   deathParticles: {fileID: 198257531950833536}
@@ -4500,7 +4500,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -2140927909
+  randomSeed: 146433929
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -4943,7 +4943,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 5
     enabled: 1
-    type: 2
+    type: 0
     angle: 0
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
@@ -4960,7 +4960,7 @@ ParticleSystem:
     m_MeshNormalOffset: 0
     m_UseMeshMaterialIndex: 0
     m_UseMeshColors: 1
-    alignToDirection: 0
+    alignToDirection: 1
     randomDirectionAmount: 0
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
@@ -5060,7 +5060,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2000
+      scalar: 1000
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -7069,7 +7069,7 @@ ParticleSystem:
         m_RotationOrder: 4
     maxLights: 20
   TrailModule:
-    enabled: 0
+    enabled: 1
     ratio: 1
     lifetime:
       serializedVersion: 2
@@ -7115,7 +7115,7 @@ ParticleSystem:
     minVertexDistance: 0.2
     textureMode: 0
     worldSpace: 0
-    dieWithParticles: 1
+    dieWithParticles: 0
     sizeAffectsWidth: 1
     sizeAffectsLifetime: 0
     inheritParticleColor: 1
@@ -7817,7 +7817,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1951338289
+  randomSeed: 1304146001
   InitialModule:
     serializedVersion: 3
     enabled: 1
