@@ -1070,10 +1070,11 @@ MonoBehaviour:
   levelLoadDelay: 3
   mainEngine: {fileID: 8300000, guid: cbfccc3b6c92046aea1eb7c3a1df2f98, type: 3}
   deathSound: {fileID: 8300000, guid: 9b3ff22441c45483eb1a36eaaf6556f7, type: 3}
-  levelLoad: {fileID: 8300000, guid: bc25e1331cb8542a7be8cf244ccfe2ea, type: 3}
+  levelLoad: {fileID: 8300000, guid: 22018e7627d8e421c94f48a286476eba, type: 3}
   mainEngineParticles: {fileID: 198806617872337822}
   successParticles: {fileID: 198321420292565058}
   deathParticles: {fileID: 198257531950833536}
+  collision: 1
 --- !u!135 &135092024950891142
 SphereCollider:
   m_ObjectHideFlags: 1
