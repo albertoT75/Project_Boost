@@ -83,21 +83,21 @@ public class Rocket : MonoBehaviour {
   private void StartSuccessSequence()
   {
     state = State.Transcending;
-        audioSource.Stop();
-        audioSource.PlayOneShot(levelLoad);
-        successParticles.Play();
-        Invoke("LoadNextLevel", levelLoadDelay);
+    audioSource.Stop();
+    audioSource.PlayOneShot(levelLoad);
+    successParticles.Play();
+    Invoke("LoadNextLevel", levelLoadDelay);
   }
 
   private void StartDeathSequence()
   {
     state = State.Dying;
-        audioSource.Stop();
-        audioSource.PlayOneShot(deathSound);
-        Invoke("DeathParticles", 1f);
+    audioSource.Stop();
+    audioSource.PlayOneShot(deathSound);
+    Invoke("DeathParticles", 1f);
 
-        // destroy Ship
-        Invoke("LoadFirstLevel", levelLoadDelay);
+    // destroy Ship
+    Invoke("LoadFirstLevel", levelLoadDelay);
   }
 
   private void DeathParticles()
@@ -107,7 +107,13 @@ public class Rocket : MonoBehaviour {
 
   private void LoadNextLevel()
   {
-    SceneManager.LoadScene(1);
+    int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+    int nextSceneIndex = currentSceneIndex + 1;
+
+    if (nextSceneIndex == SceneManager.sceneCountInBuildSettings)
+    {
+      nextSceneIndex = 0; // loop back to start
+    }
   }
 
   private void LoadFirstLevel()
