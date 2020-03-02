@@ -15,16 +15,13 @@ public class Rocket : MonoBehaviour {
   [SerializeField] ParticleSystem successParticles;
   [SerializeField] ParticleSystem deathParticles;
 
-  [SerializeField] bool collision;
-
   Rigidbody rigidBody;
   AudioSource audioSource;
-
-  // bool collisionsDisabled = true;
 
   enum State { Alive, Dying, Transcending }
   State state = State.Alive;
 
+  bool collisionsDisabled = false;
 
 	// Use this for initialization
 	void Start () {
@@ -42,29 +39,28 @@ public class Rocket : MonoBehaviour {
       RespondToThrustInput();
   		RespondToRotateInput();
     }
-    // if (Debug.isDebugBuild)
-    // {
-    //   RespondToDebugKeys();
-    // }
+    if (Debug.isDebugBuild)
+    {
+      RespondToDebugKeys();
+    }
 	}
 
-  // private void RespondToDebugKeys()
-  // {
-  //   if (Input.GetKeyDown(KeyCode.L))
-  //   {
-  //     LoadNextLevel();
-  //   }
-  //   else if (Input.GetKey(KeyCode.C))
-  //   {
-  //     collisionsDisabled = !collisionsDisabled; //toggle
-  //   }
-  // }
+  private void RespondToDebugKeys()
+  {
+    if (Input.GetKeyDown(KeyCode.L))
+    {
+      LoadNextLevel();
+    }
+    else if (Input.GetKeyDown(KeyCode.C))
+    {
+      collisionsDisabled = !collisionsDisabled; //toggle
+    }
+  }
 
   void OnCollisionEnter(Collision collision)
   {
 
-    if (state != State.Alive)  { return; } // ignore collision
-      // || collisionsDisabled)
+    if (state != State.Alive || collisionsDisabled)  { return; }
 
     switch (collision.gameObject.tag)
     {
@@ -114,6 +110,7 @@ public class Rocket : MonoBehaviour {
     {
       nextSceneIndex = 0; // loop back to start
     }
+    SceneManager.LoadScene(nextSceneIndex);
   }
 
   private void LoadFirstLevel()
