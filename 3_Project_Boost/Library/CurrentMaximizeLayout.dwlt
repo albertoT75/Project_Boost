@@ -23,7 +23,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 52
+  controlID: 2330
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 53
+  controlID: 2331
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 54
+  controlID: 2332
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -201,9 +201,9 @@ MonoBehaviour:
     height: 423
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 44d1ffff
-    m_LastClickedID: -11964
-    m_ExpandedIDs: f6d4ffffc8d6ffff7cd8ffff14daffff0adcffffdef3ffff9efbffff00000000
+    m_SelectedIDs: f4d4ffff
+    m_LastClickedID: -11020
+    m_ExpandedIDs: f673fffff6d4ffffc8d6ffff7cd8ffff14daffff0adcffffdef3ffff9efbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -285,9 +285,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 8.267525, y: 21.203697, z: 94.970474}
+    m_Target: {x: -0.832077, y: 22.024727, z: 94.34302}
     speed: 2
-    m_Value: {x: 8.267525, y: 21.203697, z: 94.970474}
+    m_Value: {x: -0.832077, y: 22.024727, z: 94.34302}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -314,9 +314,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0.0078068636, y: 0.03509072, z: -0.00027416548, w: -0.9993537}
   m_Size:
-    m_Target: 190.01736
+    m_Target: 180.00117
     speed: 2
-    m_Value: 190.01736
+    m_Value: 180.00117
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -418,18 +418,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Lights
+    - Assets/Audio
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Lights
+  - Assets/Audio
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /home/albertotarantino/code/albertoT75/Project_Boost/3_Project_Boost
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: f6270000
-    m_LastClickedID: 10230
+    m_SelectedIDs: ec270000
+    m_LastClickedID: 10220
     m_ExpandedIDs: 000000004c270000ec27000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -458,7 +458,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000004c270000ec270000
+    m_ExpandedIDs: 000000004c270000ec27000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -483,9 +483,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 44d1ffff
-    m_LastClickedInstanceID: -11964
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: f4d4ffff
+    m_LastClickedInstanceID: -11020
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c623000000000000f01cffff
     m_RenameOverlay:
       m_UserAcceptedRename: 0
