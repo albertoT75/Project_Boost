@@ -91,6 +91,7 @@ public class Rocket : MonoBehaviour {
     audioSource.Stop();
     audioSource.PlayOneShot(deathSound);
     Invoke("DeathParticles", 1f);
+    mainEngineParticles.Stop();
 
     // destroy Ship
     Invoke("LoadFirstLevel", levelLoadDelay);
