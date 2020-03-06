@@ -1,4 +1,0 @@
-sceneSetups:
-- path: Assets/Ring wave.unity
-  isLoaded: 1
-  isActive: 1
