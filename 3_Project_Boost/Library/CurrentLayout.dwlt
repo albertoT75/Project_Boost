@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -106,7 +106,7 @@ MonoBehaviour:
     y: 30
     width: 1600
     height: 746
-  m_MinSize: {x: 683, y: 492}
+  m_MinSize: {x: 681, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
   controlID: 50
@@ -130,7 +130,7 @@ MonoBehaviour:
     y: 0
     width: 1238
     height: 746
-  m_MinSize: {x: 406, y: 492}
+  m_MinSize: {x: 404, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
   controlID: 51
@@ -154,8 +154,8 @@ MonoBehaviour:
     y: 0
     width: 1238
     height: 444
-  m_MinSize: {x: 406, y: 221}
-  m_MaxSize: {x: 8006, y: 4021}
+  m_MinSize: {x: 404, y: 221}
+  m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
   controlID: 52
 --- !u!114 &8
@@ -176,8 +176,8 @@ MonoBehaviour:
     y: 0
     width: 329
     height: 444
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -369,7 +369,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 928cffff86fbffff000000007c2b0000
+    m_ExpandedIDs: 88fbffff9efbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -424,9 +424,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -22.6793, y: 20.919407, z: -5.3450546}
+    m_Target: {x: -28.9985, y: 8.916102, z: -4.034958}
     speed: 2
-    m_Value: {x: -22.6793, y: 20.919407, z: -5.3450546}
+    m_Value: {x: -28.9985, y: 8.916102, z: -4.034958}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -451,11 +451,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.059139196, y: 0.009280103, z: 0.00054985104, w: -0.9982065}
     speed: 2
-    m_Value: {x: 0.059139196, y: 0.009280103, z: 0.00054985104, w: -0.9982065}
+    m_Value: {x: 0.059139196, y: 0.009280103, z: 0.00054985104, w: -0.99820644}
   m_Size:
-    m_Target: 69.230225
+    m_Target: 16.443668
     speed: 2
-    m_Value: 69.230225
+    m_Value: 16.443668
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -531,19 +531,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/EffectExamples/Wave particle
+    - Assets/Materials
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/EffectExamples/Wave particle
+  - Assets/Materials
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /home/albertotarantino/code/albertoT75/Project_Boost/3_Project_Boost
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 80280000
-    m_LastClickedID: 10368
-    m_ExpandedIDs: 00000000262800006a280000462a0000ae2c0000b02c0000b22c0000b42c000000ca9a3bffffff7f
+    m_SelectedIDs: e8280000
+    m_LastClickedID: 10472
+    m_ExpandedIDs: 0000000022280000402a00003e2c0000402c0000422c0000442c000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -571,7 +571,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000026280000462a0000ae2c0000b02c0000b22c0000b42c0000
+    m_ExpandedIDs: 000000002228000066280000402a00003e2c0000402c0000422c0000442c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
