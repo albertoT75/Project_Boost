@@ -3,18 +3,40 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour {
 
-  public Transform target;
+  public Transform playerTransform;
 
-  public float smoothSpeed = 0.125f;
-  public Vector3 offset;
+  public float xoffset;
+  public float yoffset;
 
-
-	void LateUpdate ()
+  void start()
   {
-    Vector3 desiredPosition = target.position + offset;
-    Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed*Time.deltaTime);
-		transform.position = smoothedPosition;
+    playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+  }
 
-    transform.LookAt(target);
-	}
+  void Update()
+  {
+
+  }
+
+  void FixedUpdate()
+  {
+
+  }
+
+  void LateUpdate()
+  {
+    // we store current camera's position in variable temp - temporary position
+    Vector3 temp = transform.position;
+
+    // we set the camera's position x to be equal to the player's position x
+    temp.x = playerTransform.position.x;
+    temp.y = playerTransform.position.y;
+
+    // this will add the offset value to the temporary camera x position
+    temp.x += xoffset;
+    temp.y += yoffset;
+
+    // we set back the camera's temp position to the camera's current position
+    transform.position = temp;
+  }
 }
