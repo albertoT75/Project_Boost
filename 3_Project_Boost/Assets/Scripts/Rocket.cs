@@ -14,6 +14,9 @@ public class Rocket : MonoBehaviour {
   [SerializeField] ParticleSystem mainEngineParticles;
   [SerializeField] ParticleSystem successParticles;
   [SerializeField] ParticleSystem deathParticles;
+  [SerializeField] ParticleSystem beamParticles;
+
+
 
   Rigidbody rigidBody;
   AudioSource audioSource;
@@ -131,6 +134,21 @@ public class Rocket : MonoBehaviour {
       audioSource.Stop();
       mainEngineParticles.Stop();
     }
+  }
+
+  private void RespondToBeamImput()
+  {
+    if (Input.GetKey(KeyCode.X))
+    {
+      ActivateBeam();
+      // to do :tract human
+    }
+  }
+
+  private void ActivateBeam()
+  {
+    beamParticles.Play();
+
   }
 
   private void ApplyThrust()
