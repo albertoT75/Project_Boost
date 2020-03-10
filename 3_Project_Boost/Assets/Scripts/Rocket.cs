@@ -41,6 +41,7 @@ public class Rocket : MonoBehaviour {
     {
       RespondToThrustInput();
   		RespondToRotateInput();
+      RespondToBeamImput();
     }
     if (Debug.isDebugBuild)
     {
