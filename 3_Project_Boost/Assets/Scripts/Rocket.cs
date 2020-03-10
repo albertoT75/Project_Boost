@@ -10,6 +10,7 @@ public class Rocket : MonoBehaviour {
   [SerializeField] AudioClip mainEngine;
   [SerializeField] AudioClip deathSound;
   [SerializeField] AudioClip levelLoad;
+  [SerializeField] AudioClip tractorBeam;
 
   [SerializeField] ParticleSystem mainEngineParticles;
   [SerializeField] ParticleSystem successParticles;
@@ -151,6 +152,10 @@ public class Rocket : MonoBehaviour {
 
   private void ActivateBeam()
   {
+    if (!audioSource.isPlaying)
+    {
+      audioSource.PlayOneShot(tractorBeam);
+    }
     beamParticles.Play();
 
   }
