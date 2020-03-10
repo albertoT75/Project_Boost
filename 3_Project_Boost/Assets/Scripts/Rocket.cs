@@ -173,11 +173,11 @@ public class Rocket : MonoBehaviour {
 
     if (Input.GetKey(KeyCode.A))
     {
-      transform.Rotate(-Vector3.forward * rotationThisFrame);
+      transform.Rotate(Vector3.forward * rotationThisFrame);
     }
     else if (Input.GetKey(KeyCode.D))
     {
-      transform.Rotate(Vector3.forward * rotationThisFrame);
+      transform.Rotate(-Vector3.forward * rotationThisFrame);
     }
     rigidBody.constraints = RigidbodyConstraints.FreezeRotationX
         | RigidbodyConstraints.FreezeRotationY
