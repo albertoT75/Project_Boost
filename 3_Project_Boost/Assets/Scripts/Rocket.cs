@@ -74,6 +74,7 @@ public class Rocket : MonoBehaviour {
       case "Finish":
         StartSuccessSequence();
         break;
+        // to do case "kidnapped"
       default:
         StartDeathSequence();
         break;
@@ -149,6 +150,16 @@ public class Rocket : MonoBehaviour {
       ActivateBeam();
       // to do :tract human
     }
+    else
+    {
+      StopBeaming();
+    }
+  }
+
+  private void StopBeaming()
+  {
+
+    beamParticles.Stop();
   }
 
   private void ActivateBeam()
