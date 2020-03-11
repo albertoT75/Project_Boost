@@ -10,6 +10,7 @@ public class Rocket : MonoBehaviour {
   [SerializeField] AudioClip mainEngine;
   [SerializeField] AudioClip deathSound;
   [SerializeField] AudioClip levelLoad;
+  [SerializeField] AudioClip tractorBeam;
 
   [SerializeField] ParticleSystem mainEngineParticles;
   [SerializeField] ParticleSystem successParticles;
@@ -38,6 +39,7 @@ public class Rocket : MonoBehaviour {
 
     if (!isTransictioning)
     {
+      RespondToBeamImput();
       RespondToThrustInput();
   		RespondToRotateInput();
     }
@@ -72,11 +74,16 @@ public class Rocket : MonoBehaviour {
       case "Finish":
         StartSuccessSequence();
         break;
+      // to do case "human"
+      //   StartKidnapSequence();
+        break;
       default:
         StartDeathSequence();
         break;
     }
   }
+
+  // to do kidnap sequence
 
   private void StartSuccessSequence()
   {
@@ -147,10 +154,24 @@ public class Rocket : MonoBehaviour {
       ActivateBeam();
       // to do :tract human
     }
+    else
+    {
+      StopBeaming();
+    }
+  }
+
+  private void StopBeaming()
+  {
+
+    beamParticles.Stop();
   }
 
   private void ActivateBeam()
   {
+    if (!audioSource.isPlaying)
+    {
+      audioSource.PlayOneShot(tractorBeam);
+    }
     beamParticles.Play();
 
   }
