@@ -139,7 +139,7 @@ public class Rocket : MonoBehaviour {
 
   private void StopApplyingThrust()
   {
-    audioSource.Stop();
+    // audioSource.Stop();
     mainEngineParticles.Stop();
   }
 
