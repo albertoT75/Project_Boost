@@ -39,9 +39,9 @@ public class Rocket : MonoBehaviour {
 
     if (!isTransictioning)
     {
+      RespondToBeamImput();
       RespondToThrustInput();
   		RespondToRotateInput();
-      RespondToBeamImput();
     }
     if (Debug.isDebugBuild)
     {
@@ -74,12 +74,16 @@ public class Rocket : MonoBehaviour {
       case "Finish":
         StartSuccessSequence();
         break;
-        // to do case "kidnapped"
+      // to do case "human"
+      //   StartKidnapSequence();
+        break;
       default:
         StartDeathSequence();
         break;
     }
   }
+
+  // to do kidnap sequence
 
   private void StartSuccessSequence()
   {
